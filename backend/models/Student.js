@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 const studentSchema = new mongoose.Schema({
 
-    // Personal Details
     name: {
         type: String,
         required: true
@@ -20,13 +19,6 @@ const studentSchema = new mongoose.Schema({
         unique: true
     },
 
-    gender: {
-        type: String,
-        enum: ["Male", "Female", "Other"],
-        required: true
-    },
-
-    // Academic Details
     department: {
         type: String,
         required: true
@@ -44,7 +36,15 @@ const studentSchema = new mongoose.Schema({
 
     section: {
         type: String,
-        default: ""
+        required: true
+    },
+
+    gender: {
+        type: String
+    },
+
+    phone: {
+        type: String
     },
 
     cgpa: {
@@ -52,30 +52,6 @@ const studentSchema = new mongoose.Schema({
         default: 0
     },
 
-    // Skills
-    skills: {
-        type: [String],
-        default: []
-    },
-
-    // Career Profiles
-    github: {
-        type: String,
-        default: ""
-    },
-
-    linkedin: {
-        type: String,
-        default: ""
-    },
-
-    // Daily Study Goal
-    dailyStudyHours: {
-        type: Number,
-        default: 2
-    },
-
-    // Account Creation Time
     createdAt: {
         type: Date,
         default: Date.now
