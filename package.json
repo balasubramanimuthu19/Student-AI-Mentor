@@ -1,6 +1,18 @@
 {
+  "name": "student-ai-mentor",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && node server.js",
+    "ai": "cd ai-service && python app.py",
+    "start": "concurrently \"npm run backend\" \"npm run ai\" \"npm run frontend\""
+  },
   "dependencies": {
     "multer": "^2.2.0",
     "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
   }
 }
