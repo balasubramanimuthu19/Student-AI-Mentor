@@ -1,0 +1,17 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+
+# AI service
+ai-service/.env
+ai-service/__pycache__/
+ai-service/uploads/
+
+# VS Code
+.vscode/
+
+# OS files
+Thumbs.db
+.DS_Store
